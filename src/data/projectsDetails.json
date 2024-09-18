@@ -1,0 +1,55 @@
+[
+  {
+    "name": "FootyQuizMaster",
+    "imageSrc": "./footyquizmaster.png",
+    "description": "FootyQuizMaster is a fun web app with four quiz modes to challenge football fans' knowledge.",
+    "techStack": [
+      { "name": "React.js", "link": "https://react.dev/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
+      { "name": "Vite", "link": "https://vitejs.dev/" },
+      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
+      { "name": "Firebase", "link": "https://firebase.google.com/" },
+      { "name": "Axios", "link": "https://axios-http.com/" },
+      { "name": "React Router", "link": "https://reactrouter.com/en/main" }
+    ],
+    "githubLink": "https://github.com/belgacemchandoul/footballQuizApp",
+    "liveLink": "https://footyquizmaster.netlify.app/",
+    "moreInfoLink": ""
+  },
+  {
+    "name": "HireHaven",
+    "imageSrc": "./hirehaven.png",
+    "description": "HireHaven is a job board platform where users can log in, explore jobs, apply, and update their portfolios",
+    "techStack": [
+      { "name": "Next.js", "link": "https://nextjs.org/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
+      { "name": "Prisma", "link": "https://www.prisma.io/" },
+      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
+      { "name": "Framer Motion", "link": "https://www.framer.com/motion/" },
+      { "name": "Axios", "link": "https://axios-http.com/" },
+      { "name": "React Hook Form", "link": "https://react-hook-form.com/" },
+      { "name": "NextAuth.js", "link": "https://next-auth.js.org/" }
+    ],
+    "githubLink": "https://github.com/belgacemchandoul/job-board-app",
+    "liveLink": "https://job-board-app-alpha.vercel.app/",
+    "moreInfoLink": ""
+  },
+  {
+    "name": "EmotiScan",
+    "imageSrc": "./emotiscan.png",
+    "description": "EmotiScan is a web app that analyzes emotions and sentiments in text, using machine learning to detect tone and sentiment.",
+    "techStack": [
+      { "name": "React.js", "link": "https://react.dev/" },
+      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
+      { "name": "Vite", "link": "https://vitejs.dev/" },
+      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
+      { "name": "Framer Motion", "link": "https://www.framer.com/motion/" },
+      { "name": "Axios", "link": "https://axios-http.com/" },
+      { "name": "Chart.js", "link": "https://www.chartjs.org/" },
+      { "name": "Hugging face", "link": "https://huggingface.co/" }
+    ],
+    "githubLink": "https://github.com/belgacemchandoul/EmotiScan",
+    "liveLink": "https://emotiscan.netlify.app/",
+    "moreInfoLink": ""
+  }
+]

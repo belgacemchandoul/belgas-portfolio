@@ -1,5 +1,6 @@
 import MainAbout from "./components/MainAbout";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -7,6 +8,7 @@ const App = () => {
       <div className="container mx-auto max-w-2xl p-4">
         <Navbar />
         <MainAbout />
+        <Projects />
       </div>
     </div>
   );

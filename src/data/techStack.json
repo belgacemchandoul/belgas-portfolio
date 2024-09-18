@@ -17,5 +17,7 @@
   { "name": "Git", "link": "https://git-scm.com/" },
   { "name": "Firebase", "link": "https://firebase.google.com/" },
   { "name": "TanStack Query", "link": "https://tanstack.com/" },
-  { "name": "SWC", "link": "https://swc.rs/" }
+  { "name": "SWC", "link": "https://swc.rs/" },
+  { "name": "Chart.js", "link": "https://www.chartjs.org/" },
+  { "name": "Hugging face", "link": "https://huggingface.co/" }
 ]

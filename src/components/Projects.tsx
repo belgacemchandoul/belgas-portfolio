@@ -5,7 +5,7 @@ import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
 const Projects = () => {
   return (
     <div
-      id="work"
+      id="projects"
       className="font-montserrat mt-20 flex flex-col gap-6 leading-7"
     >
       <RoughNotationGroup show={true}>
@@ -15,9 +15,9 @@ const Projects = () => {
       </RoughNotationGroup>
       <p className=" text-neutral-400">
         Check out some of my latest creations! Here are a few recent projects
-        I've poured my creativity into
+        I've poured my creativity into👇🏻
       </p>
-      <section className="flex flex-col gap-16">
+      <section className="flex flex-col gap-16 mt-5">
         {projectsDetails.map((project) => (
           <ProjectCard
             key={project.name}

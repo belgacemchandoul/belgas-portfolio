@@ -1,11 +1,7 @@
 [
   {
-    "name": "Home",
-    "link": "/"
-  },
-  {
-    "name": "Work",
-    "link": "#work"
+    "name": "Projects",
+    "link": "#projects"
   },
   {
     "name": "Contact",

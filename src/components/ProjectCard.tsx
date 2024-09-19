@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Link
                 to={liveLink}
                 target="_blank"
-                className=" hover:text-amber-500 duration-300"
+                className=" hover:text-teal-500 duration-300"
                 title="Live demo"
               >
                 <OpenInNewIcon />

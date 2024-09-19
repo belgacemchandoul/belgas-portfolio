@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import navbarItems from "../data/navbarItems.json";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useState } from "react";
@@ -18,8 +19,15 @@ const Navbar = () => {
       <nav className="flex items-center gap-10">
         <ul className="flex gap-6">
           {navbarItems.map((item) => (
-            <li key={item.name} className={`${navbarHover}`}>
-              <Link to={item.link}>{item.name}</Link>
+            <li key={item.name} className={`${navbarHover} cursor-pointer`}>
+              <ScrollLink
+                to={item.link.replace("#", "")}
+                smooth={true}
+                duration={500}
+                className="scroll-smooth"
+              >
+                {item.name}
+              </ScrollLink>
             </li>
           ))}
         </ul>

@@ -7,7 +7,11 @@
   src: local("PlaypenSans-VariableFont_wght"),
     url("./assets/fonts/PlaypenSans-VariableFont_wght.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "montserrat";
+  src: local("PlaypenSans-VariableFont_wght"),
+    url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;

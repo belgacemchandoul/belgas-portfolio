@@ -1,9 +1,11 @@
 import techStack from "../data/techStack.json";
 import TechCard from "./TechCard";
 import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
+import resume from "../assets/Belgacem Chandoul.pdf";
+
 const MainAbout = () => {
   return (
-    <div className=" flex font-playpen justify-between items-center mt-20">
+    <div className=" flex font-montserrat justify-between items-center mt-20">
       <div className="flex flex-col gap-6">
         <RoughNotationGroup show={true}>
           <span className="text-4xl font-semibold">Hey👋🏻, I'm Belgacem.</span>
@@ -31,7 +33,9 @@ const MainAbout = () => {
             <RoughNotation type="circle" color="#f59e0b" padding={[8, 0]}>
               {" "}
               <span className="cursor-pointer hover:opacity-85 duration-300">
-                Click here
+                <a href={resume} download="Belgacem Chandoul's resume">
+                  Click here
+                </a>
               </span>{" "}
             </RoughNotation>
             to download my resume.

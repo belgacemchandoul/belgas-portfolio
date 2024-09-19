@@ -1,10 +1,18 @@
 import projectsDetails from "../data/projectsDetails.json";
 import ProjectCard from "./ProjectCard";
+import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
 
 const Projects = () => {
   return (
-    <div id="work" className="font-playpen mt-20 flex flex-col gap-6 leading-7">
-      <div className="text-4xl font-semibold">Personal projects🗂️</div>
+    <div
+      id="work"
+      className="font-montserrat mt-20 flex flex-col gap-6 leading-7"
+    >
+      <RoughNotationGroup show={true}>
+        <RoughNotation type="bracket" color="#f59e0b" brackets={"left"}>
+          <div className="text-4xl font-semibold">Personal projects🗂️</div>
+        </RoughNotation>
+      </RoughNotationGroup>
       <p className=" text-neutral-400">
         Check out some of my latest creations! Here are a few recent projects
         I've poured my creativity into

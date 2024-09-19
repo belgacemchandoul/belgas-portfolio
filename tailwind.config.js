@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         playpen: ["Playpen"],
+        montserrat: ["Montserrat"],
       },
     },
   },

@@ -24,11 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-1">
-      <Link
-        to={moreInfoLink}
-        target="_blank"
-        className="relative group overflow-hidden"
-      >
+      <Link to={moreInfoLink} className="relative group overflow-hidden">
         <img
           src={imageSrc}
           className="rounded-t-3xl transition-transform duration-500 ease-in-out transform group-hover:scale-110"

@@ -4,52 +4,144 @@
     "imageSrc": "./footyquizmaster.png",
     "description": "FootyQuizMaster is a fun web app with four quiz modes to challenge football fans' knowledge.",
     "techStack": [
-      { "name": "React.js", "link": "https://react.dev/" },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
-      { "name": "Vite", "link": "https://vitejs.dev/" },
-      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
-      { "name": "Firebase", "link": "https://firebase.google.com/" },
-      { "name": "Axios", "link": "https://axios-http.com/" },
-      { "name": "React Router", "link": "https://reactrouter.com/en/main" }
+      {
+        "name": "React.js",
+        "link": "https://react.dev/",
+        "description": "For building the interactive UI."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Vite",
+        "link": "https://vitejs.dev/",
+        "description": "For a fast and optimized development environment with a modern build tool."
+      },
+      {
+        "name": "Tailwindcss",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Firebase",
+        "link": "https://firebase.google.com/",
+        "description": "For rendering pie and bar charts that represent the emotional and sentiment data."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests to Hugging Face models."
+      },
+      {
+        "name": "React Router",
+        "link": "https://reactrouter.com/en/main",
+        "description": "For navigation between different quiz games and pages."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/footballQuizApp",
     "liveLink": "https://footyquizmaster.netlify.app/",
-    "moreInfoLink": ""
+    "moreInfoLink": "/projects/footyquizmaster"
   },
   {
     "name": "HireHaven",
     "imageSrc": "./hirehaven.png",
-    "description": "HireHaven is a job board platform where users can log in, explore jobs, apply, and update their portfolios",
+    "description": "HireHaven is a job board platform where users can log in, explore jobs, apply, and update their portfolios.",
     "techStack": [
-      { "name": "Next.js", "link": "https://nextjs.org/" },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
-      { "name": "Prisma", "link": "https://www.prisma.io/" },
-      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
-      { "name": "Framer Motion", "link": "https://www.framer.com/motion/" },
-      { "name": "Axios", "link": "https://axios-http.com/" },
-      { "name": "React Hook Form", "link": "https://react-hook-form.com/" },
-      { "name": "NextAuth.js", "link": "https://next-auth.js.org/" }
+      {
+        "name": "Next.js",
+        "link": "https://nextjs.org/",
+        "description": " For server-side rendering and routing."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Prisma",
+        "link": "https://www.prisma.io/",
+        "description": "For database management and data modeling."
+      },
+      {
+        "name": "Tailwindcss",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "or beautiful animations and transitions."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests to Hugging Face models."
+      },
+      {
+        "name": "React Hook Form",
+        "link": "https://react-hook-form.com/",
+        "description": "For efficient and flexible form management."
+      },
+      {
+        "name": "NextAuth.js",
+        "link": "https://next-auth.js.org/",
+        "description": "For secure authentication and authorization."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/job-board-app",
     "liveLink": "https://job-board-app-alpha.vercel.app/",
-    "moreInfoLink": ""
+    "moreInfoLink": "/projects/hirehaven"
   },
   {
     "name": "EmotiScan",
     "imageSrc": "./emotiscan.png",
     "description": "EmotiScan is a web app that analyzes emotions and sentiments in text, using machine learning to detect tone and sentiment.",
     "techStack": [
-      { "name": "React.js", "link": "https://react.dev/" },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/" },
-      { "name": "Vite", "link": "https://vitejs.dev/" },
-      { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
-      { "name": "Framer Motion", "link": "https://www.framer.com/motion/" },
-      { "name": "Axios", "link": "https://axios-http.com/" },
-      { "name": "Chart.js", "link": "https://www.chartjs.org/" },
-      { "name": "Hugging face", "link": "https://huggingface.co/" }
+      {
+        "name": "React.js",
+        "link": "https://react.dev/",
+        "description": "For building the interactive UI."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Vite",
+        "link": "https://vitejs.dev/",
+        "description": "For a fast and optimized development environment with a modern build tool."
+      },
+      {
+        "name": "Tailwindcss",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "For beautiful animations and transitions."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests to Hugging Face models."
+      },
+      {
+        "name": "Chart.js",
+        "link": "https://www.chartjs.org/",
+        "description": "For rendering pie and bar charts that represent the emotional and sentiment data."
+      },
+      {
+        "name": "Hugging face",
+        "link": "https://huggingface.co/",
+        "description": "For leveraging state-of-the-art pre-trained machine learning models to analyze emotions and sentiments from text."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/EmotiScan",
     "liveLink": "https://emotiscan.netlify.app/",
-    "moreInfoLink": ""
+    "moreInfoLink": "/projects/emotiscan"
   }
 ]

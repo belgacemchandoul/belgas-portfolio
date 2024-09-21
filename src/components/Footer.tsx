@@ -27,6 +27,7 @@ const Footer = () => {
             to="https://www.linkedin.com/in/belgacem-chandoul/"
             className="hover:text-blue-600 duration-300"
             title="LinkedIn"
+            target="_blank"
           >
             <LinkedInIcon />
           </Link>
@@ -34,6 +35,7 @@ const Footer = () => {
             to="https://github.com/belgacemchandoul"
             className="hover:opacity-75 duration-300"
             title="Github"
+            target="_blank"
           >
             <GitHubIcon />
           </Link>

@@ -1,13 +1,28 @@
-import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 import navbarItems from "../data/navbarItems.json";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import { useState } from "react";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Tilt from "react-parallax-tilt";
 const navbarHover = "hover:text-amber-500 duration-300";
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (_to: string, id: string) => {
+    if (location.pathname === "/") {
+      scroller.scrollTo(id, {
+        smooth: true,
+        duration: 500,
+      });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        scroller.scrollTo(id, {
+          smooth: true,
+          duration: 500,
+        });
+      }, 100);
+    }
+  };
   return (
     <header className="flex justify-between pt-10 font-montserrat font-light text-sm">
       <Tilt>
@@ -19,28 +34,15 @@ const Navbar = () => {
       <nav className="flex items-center gap-10">
         <ul className="flex gap-6">
           {navbarItems.map((item) => (
-            <li key={item.name} className={`${navbarHover} cursor-pointer`}>
-              <ScrollLink
-                to={item.link.replace("#", "")}
-                smooth={true}
-                duration={500}
-                className="scroll-smooth"
-              >
-                {item.name}
-              </ScrollLink>
+            <li
+              key={item.name}
+              className={`${navbarHover} cursor-pointer`}
+              onClick={() => handleNavigation("/", item.link.replace("#", ""))}
+            >
+              {item.name}
             </li>
           ))}
         </ul>
-        <div
-          onClick={() => setDarkMode((prevMode) => !prevMode)}
-          className="cursor-pointer"
-        >
-          {darkMode ? (
-            <LightModeIcon sx={{ fontSize: 20 }} />
-          ) : (
-            <DarkModeIcon sx={{ fontSize: 20 }} />
-          )}
-        </div>
       </nav>
     </header>
   );

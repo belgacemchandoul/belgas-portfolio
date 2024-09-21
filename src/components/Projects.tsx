@@ -10,7 +10,9 @@ const Projects = () => {
     >
       <RoughNotationGroup show={true}>
         <RoughNotation type="bracket" color="#f59e0b" brackets={"left"}>
-          <div className="text-4xl font-semibold">Personal projects🗂️</div>
+          <div className="text-3xl md:text-4xl font-semibold">
+            Personal projects🗂️
+          </div>
         </RoughNotation>
       </RoughNotationGroup>
       <p className=" text-neutral-400">

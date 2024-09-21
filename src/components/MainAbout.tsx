@@ -10,7 +10,9 @@ const MainAbout = () => {
       <div className="absolute top-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 w-64 h-64 bg-gradient-to-br from-white via-transparent to-transparent opacity-30 rounded-full filter blur-xl pointer-events-none"></div>
       <div className="flex flex-col gap-6">
         <RoughNotationGroup show={true}>
-          <span className="text-4xl font-semibold">Hey👋🏻, I'm Belgacem.</span>
+          <span className="text-3xl md:text-4xl font-semibold">
+            Hey👋🏻, I'm Belgacem.
+          </span>
           <span className=" text-neutral-400 leading-7">
             A{" "}
             <RoughNotation type="underline" color="#f59e0b">

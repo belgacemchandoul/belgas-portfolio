@@ -1,7 +1,7 @@
 import techStack from "../data/techStack.json";
 import TechCard from "./TechCard";
 import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
-import resume from "../assets/Belgacem Chandoul.pdf";
+import resume from "../assets/Belgacem_Chandoul.pdf";
 
 const MainAbout = () => {
   return (

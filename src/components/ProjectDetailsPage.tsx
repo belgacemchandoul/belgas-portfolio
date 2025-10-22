@@ -5,12 +5,12 @@ import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 interface ProjectDetailsPageProps {
-  title: string;
-  description: string;
-  imgSrc: string;
-  summary: string;
-  techStack: { name: string; desc: string; link: string }[];
-  features: { feature: string; featureDesc: string }[];
+  title?: string;
+  description?: string;
+  imgSrc?: string;
+  summary?: string;
+  techStack?: { name: string; desc: string; link: string }[];
+  features?: { feature: string; featureDesc: string }[];
 }
 
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({
@@ -74,7 +74,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({
                     </RoughNotation>
                   </div>
                   <ul className="flex flex-col gap-2">
-                    {techStack.map((item) => (
+                    {techStack?.map((item) => (
                       <li key={item.name} className="font-extralight">
                         <Link
                           to={item.link}
@@ -96,7 +96,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({
                     </RoughNotation>
                   </div>
                   <ul className="flex flex-col gap-3">
-                    {features.map((feature) => (
+                    {features?.map((feature) => (
                       <li key={feature.feature} className="font-extralight">
                         <span>
                           <span className="font-normal mr-1">

@@ -2,27 +2,37 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 import navbarItems from "../data/navbarItems.json";
 import Tilt from "react-parallax-tilt";
+
 const navbarHover = "hover:text-amber-500 duration-300";
+
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleNavigation = (_to: string, id: string) => {
-    if (location.pathname === "/") {
-      scroller.scrollTo(id, {
-        smooth: true,
-        duration: 500,
-      });
+  const handleNavigation = (to: string, id: string) => {
+    // Check if it's a route navigation (starts with /) or section scroll (starts with #)
+    if (to.startsWith("/")) {
+      // Route navigation
+      navigate(to);
     } else {
-      navigate("/");
-      setTimeout(() => {
+      // Section scroll navigation
+      if (location.pathname === "/") {
         scroller.scrollTo(id, {
           smooth: true,
           duration: 500,
         });
-      }, 100);
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          scroller.scrollTo(id, {
+            smooth: true,
+            duration: 500,
+          });
+        }, 100);
+      }
     }
   };
+
   return (
     <header className="flex justify-between pt-10 font-montserrat font-light text-sm">
       <Tilt>
@@ -37,7 +47,9 @@ const Navbar = () => {
             <li
               key={item.name}
               className={`${navbarHover} cursor-pointer`}
-              onClick={() => handleNavigation("/", item.link.replace("#", ""))}
+              onClick={() =>
+                handleNavigation(item.link, item.link.replace("#", ""))
+              }
             >
               {item.name}
             </li>

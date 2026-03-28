@@ -1,5 +1,76 @@
 [
   {
+    "name": "YouSafe",
+    "imageSrc": "./yousafe.png",
+    "description": "YouSafe is a wheelchair accessibility platform for Ireland, helping users find accessible restaurants, hotels, transport, hospitals, parks and more across Dublin. Every location is verified, rated and packed with real accessibility details.",
+    "techStack": [
+      {
+        "name": "Next.js",
+        "link": "https://nextjs.org/",
+        "description": "For server-side rendering, App Router, and API routes."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Prisma",
+        "link": "https://www.prisma.io/",
+        "description": "For database management and data modeling with PostgreSQL."
+      },
+      {
+        "name": "Supabase",
+        "link": "https://supabase.com/",
+        "description": "For hosting the PostgreSQL database with connection pooling."
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and mobile-first responsive design."
+      },
+      {
+        "name": "Shadcn/ui",
+        "link": "https://ui.shadcn.com/",
+        "description": "For accessible and reusable UI components."
+      },
+      {
+        "name": "Leaflet",
+        "link": "https://leafletjs.com/",
+        "description": "For the interactive map displaying accessible locations across Dublin."
+      },
+      {
+        "name": "NextAuth.js",
+        "link": "https://next-auth.js.org/",
+        "description": "For secure admin authentication and session management."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "For scroll-triggered animations and smooth page transitions."
+      },
+      {
+        "name": "React Hook Form",
+        "link": "https://react-hook-form.com/",
+        "description": "For efficient and flexible form management in the admin dashboard."
+      },
+      {
+        "name": "Tiptap",
+        "link": "https://tiptap.dev/",
+        "description": "For the rich text editor used in the blog post management."
+      },
+      {
+        "name": "Zod",
+        "link": "https://zod.dev/",
+        "description": "For schema validation on both forms and API routes."
+      }
+    ],
+    "githubLink": "https://github.com/belgacemchandoul/YouSafe",
+    "liveLink": "https://you-safe.vercel.app/",
+    "moreInfoLink": "/projects/yousafe"
+  },
+
+  {
     "name": "FootyQuizMaster",
     "imageSrc": "./footyquizmaster.png",
     "description": "FootyQuizMaster is a fun web app with four quiz modes to challenge football fans' knowledge.",

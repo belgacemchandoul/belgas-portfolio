@@ -3,7 +3,7 @@ import App from "./App";
 import FootyQuizMaster from "./pages/FootyQuizMaster";
 import HireHaven from "./pages/HireHaven";
 import Emotiscan from "./pages/Emotiscan";
-
+import YouSafe from "./pages/YouSafe";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/projects/emotiscan",
     element: <Emotiscan />,
+  },
+  {
+    path: "/projects/yousafe",
+    element: <YouSafe />,
   },
 ]);
 

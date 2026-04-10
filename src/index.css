@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ── Local fonts (kept for any legacy usage) ── */
 @font-face {
   font-family: "playpen";
   src: local("PlaypenSans-VariableFont_wght"),
@@ -9,10 +12,21 @@
 }
 @font-face {
   font-family: "montserrat";
-  src: local("PlaypenSans-VariableFont_wght"),
+  src: local("Montserrat-VariableFont_wght"),
     url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
+
+/* ── CSS custom properties ───────────────────────────────────────── */
+:root {
+  --color-lime: #C8F264;
+  --color-hero-bg: #0A0A0A;
+  --color-surface: #111111;
+  --color-muted: #6B6B6B;
+  cursor: none; /* hide default cursor — we use custom cursor */
+}
+
 * {
+  cursor: none !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,17 +37,54 @@
   font-weight: inherit;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #18181b;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #a3a3a3;
-  border-radius: 10px;
+html {
+  scroll-behavior: smooth;
+  background: #0A0A0A;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #525252;
+/* ── Focus visible ────────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 2px;
+}
+
+/* ── Selection ────────────────────────────────────────────────────── */
+::selection {
+  background: var(--color-lime);
+  color: #0A0A0A;
+}
+
+/* ── Scrollbar — WebKit ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+
+/* ── Scrollbar — Firefox ──────────────────────────────────────────── */
+* {
+  scrollbar-color: #222 #0A0A0A;
+  scrollbar-width: thin;
+}
+
+/* ── Mobile hero drift animations ───────────────────────────────────── */
+@keyframes drift-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes drift-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.drift-left  { animation: drift-left  30s linear infinite; }
+.drift-right { animation: drift-right 35s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .drift-left, .drift-right { animation: none; }
 }

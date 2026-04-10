@@ -1,36 +1,38 @@
-import { useEffect, useState } from "react";
-import Footer from "./components/Footer";
-import MainAbout from "./components/MainAbout";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import LoadingSpinner from "./components/LoadingSpinner";
+import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import LoadingSpinner from './components/LoadingSpinner'
+import Navbar from './components/Navbar'
+import Hero from './components/sections/Hero'
+import Projects from './components/sections/Projects'
+import About from './components/sections/About'
+import Experience from './components/sections/Experience'
+import Contact from './components/sections/Contact'
+import Footer from './components/Footer'
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    const timer = setTimeout(() => setLoading(false), 1200)
+    return () => clearTimeout(timer)
+  }, [])
 
-    return () => clearTimeout(timer);
-  }, []);
   return (
-    <div>
-      {loading ? (
-        <LoadingSpinner />
-      ) : (
-        <div className="min-h-screen bg-zinc-900 text-white scroll-smooth overflow-hidden">
-          <div className="container mx-auto md:max-w-2xl max-w-xl p-4 ">
-            <Navbar />
-            <MainAbout />
-            <Projects />
-            <Footer />
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
+    <>
+      <AnimatePresence>
+        {loading && <LoadingSpinner />}
+      </AnimatePresence>
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+        <About />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  )
+}
 
-export default App;
+export default App

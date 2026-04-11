@@ -2,5 +2,4 @@
   for = "/cv/*"
   [headers.values]
     Content-Type = "application/pdf"
-    Content-Disposition = "attachment"
     Cache-Control = "no-cache, no-store, must-revalidate"

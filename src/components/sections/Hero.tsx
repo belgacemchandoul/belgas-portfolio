@@ -117,13 +117,14 @@ const Hero = () => {
               >
                 View my work ↓
               </MagneticButton>
-              <MagneticButton
-                href="/cv/CV_Belgacem_Chandoul_v2.pdf"
+              <a
+                href="/cv/CV_Belgacem_Chandoul_2.pdf"
                 download
+                data-cursor="link"
                 className="border border-zinc-700 text-white font-sans text-sm font-medium rounded-full px-7 py-3.5 hover:border-zinc-400 transition-colors duration-200"
               >
                 Download CV
-              </MagneticButton>
+              </a>
             </motion.div>
 
             {/* Stat pills */}

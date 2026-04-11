@@ -75,13 +75,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-[55%_45%] gap-8 items-center">
 
           {/* ── Left column: text content ── */}
-          <div>
-            {/* Eyebrow */}
+          {/* min-w-0 prevents flex children from overflowing their container */}
+          <div className="w-full min-w-0">
+            {/* Eyebrow — reduced tracking on mobile to prevent overflow; line break on small screens */}
             <motion.p
               {...fadeUp(0.1)}
-              className="font-mono text-[11px] text-muted tracking-[0.1em] sm:tracking-[0.2em] uppercase"
+              className="font-mono text-[11px] text-muted tracking-[0.08em] sm:tracking-[0.15em] uppercase"
             >
-              Full-Stack Engineer · Founder · Doha, Qatar
+              Full-Stack Engineer · Founder ·{' '}
+              <br className="sm:hidden" />
+              Doha, Qatar
             </motion.p>
 
             {/* Headline with mouse parallax */}
@@ -96,32 +99,32 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            {/* Subtext */}
+            {/* Subtext — max-w-full on mobile so it respects container width */}
             <motion.p
               {...fadeUp(0.4)}
-              className="font-sans text-[#666] mt-6 max-w-lg"
+              className="font-sans text-[#666] mt-6 w-full max-w-full sm:max-w-lg"
               style={{ fontSize: '18px', lineHeight: 1.8 }}
             >
               I engineer AI systems, build SaaS from zero to paying customers,
               and take on select freelance projects.
             </motion.p>
 
-            {/* CTAs */}
-            <motion.div {...fadeUp(0.55)} className="flex flex-wrap gap-4 items-center mt-12">
+            {/* CTAs — stack vertically on mobile, row on sm+ */}
+            <motion.div {...fadeUp(0.55)} className="flex flex-col sm:flex-row gap-3 mt-10">
               <MagneticButton
                 onClick={() => {
                   const el = document.getElementById('projects')
                   el?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="bg-lime text-hero-bg font-sans font-medium rounded-full px-7 py-3.5 text-sm hover:bg-lime-dim transition-colors duration-200"
+                className="bg-lime text-hero-bg font-sans font-medium rounded-full px-7 py-3.5 text-sm hover:bg-lime-dim transition-colors duration-200 w-full sm:w-auto flex items-center justify-center"
               >
                 View my work ↓
               </MagneticButton>
               <a
-                href="/cv/CV_Belgacem_Chandoul_2.pdf"
+                href="/cv/Belgacem_Chandoul_CV.pdf"
                 download
                 data-cursor="link"
-                className="border border-zinc-700 text-white font-sans text-sm font-medium rounded-full px-7 py-3.5 hover:border-zinc-400 transition-colors duration-200"
+                className="border border-zinc-700 text-white font-sans text-sm font-medium rounded-full px-7 py-3.5 hover:border-zinc-400 transition-colors duration-200 w-full sm:w-auto flex items-center justify-center"
               >
                 Download CV
               </a>

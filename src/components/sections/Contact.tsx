@@ -11,7 +11,7 @@ const fadeUp = (delay: number) => ({
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-hero-bg py-32 px-6">
+    <section id="contact" className="bg-hero-bg py-32 px-5 sm:px-6">
       <div className="max-w-5xl mx-auto border-t border-border-subtle pt-16 text-center">
         <motion.p
           {...fadeUp(0)}
@@ -23,7 +23,7 @@ const Contact = () => {
         <motion.h2
           {...fadeUp(0.1)}
           className="font-display text-white mt-4"
-          style={{ fontSize: 'clamp(44px, 6vw, 72px)', lineHeight: 1.05 }}
+          style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.05 }}
         >
           Let's build
           <br />

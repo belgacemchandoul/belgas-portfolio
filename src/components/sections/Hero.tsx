@@ -21,6 +21,9 @@ const DRIFT_BADGES = [
   'React', 'FastAPI', 'LangGraph', 'TypeScript',
   'PostgreSQL', 'Redis', 'Claude API', 'Next.js',
 ]
+// Doubled outside the component so the array reference is stable and never re-created on re-render
+const DRIFT_ROW_LEFT = [...DRIFT_BADGES, ...DRIFT_BADGES]
+const DRIFT_ROW_RIGHT = [...DRIFT_BADGES, ...DRIFT_BADGES]
 
 const Hero = () => {
   const mouseX = useMotionValue(0)
@@ -43,12 +46,13 @@ const Hero = () => {
   return (
     // Mobile: height auto, no flex centering (content sits naturally at top with pt-24)
     // Desktop: full viewport height, flex-centered
-    <section className="relative bg-hero-bg overflow-hidden lg:min-h-screen lg:flex lg:items-center">
+    <section className="relative bg-hero-bg overflow-x-hidden lg:min-h-screen lg:flex lg:items-center">
       {/* Dot grid texture */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none overflow-hidden"
         style={{
+          width: '100%',
           opacity: 0.3,
           backgroundImage: 'radial-gradient(circle, #2a2a2a 1px, transparent 1px)',
           backgroundSize: '32px 32px',
@@ -67,7 +71,7 @@ const Hero = () => {
       />
 
       {/* pt-24 on mobile clears the fixed navbar; lg:py-36 restores desktop spacing */}
-      <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-16 lg:py-36 w-full">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-16 lg:py-36 w-full">
         <div className="grid lg:grid-cols-[55%_45%] gap-8 items-center">
 
           {/* ── Left column: text content ── */}
@@ -75,7 +79,7 @@ const Hero = () => {
             {/* Eyebrow */}
             <motion.p
               {...fadeUp(0.1)}
-              className="font-mono text-[11px] text-muted tracking-[0.2em] uppercase"
+              className="font-mono text-[11px] text-muted tracking-[0.1em] sm:tracking-[0.2em] uppercase"
             >
               Full-Stack Engineer · Founder · Doha, Qatar
             </motion.p>
@@ -84,7 +88,7 @@ const Hero = () => {
             <motion.div {...fadeUp(0.25)} style={{ x: parallaxX, y: parallaxY }}>
               <h1
                 className="font-display text-white mt-5"
-                style={{ fontSize: 'clamp(52px, 7vw, 88px)', lineHeight: 1.0 }}
+                style={{ fontSize: 'clamp(36px, 8vw, 88px)', lineHeight: 1.0 }}
               >
                 Building products
                 <br />
@@ -114,7 +118,7 @@ const Hero = () => {
                 View my work ↓
               </MagneticButton>
               <MagneticButton
-                href="/cv/CV_Belgacem_Chandoul.pdf"
+                href="/cv/CV_Belgacem_Chandoul_v2.pdf"
                 download
                 className="border border-zinc-700 text-white font-sans text-sm font-medium rounded-full px-7 py-3.5 hover:border-zinc-400 transition-colors duration-200"
               >
@@ -123,7 +127,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Stat pills */}
-            <div className="flex flex-wrap gap-3 mt-16">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 mt-16">
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -147,10 +151,17 @@ const Hero = () => {
                 maskImage:       'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
               }}
             >
-              {/* Row 1 — drifts left */}
-              <div className="flex mb-2.5">
-                <div className="drift-left flex gap-2" style={{ width: 'max-content' }}>
-                  {[...DRIFT_BADGES, ...DRIFT_BADGES].map((label, i) => (
+              {/* Row 1 — drifts left. Parent is NOT flex so it doesn't constrain the scrolling child width */}
+              <div className="mb-2.5">
+                <div
+                  className="flex gap-2"
+                  style={{
+                    width: 'max-content',
+                    animation: 'drift-left 30s linear infinite',
+                    willChange: 'transform',
+                  }}
+                >
+                  {DRIFT_ROW_LEFT.map((label, i) => (
                     <span
                       key={i}
                       className="font-mono text-[10px] text-zinc-500 bg-surface border border-border-subtle rounded-full px-3 py-1 whitespace-nowrap"
@@ -162,9 +173,16 @@ const Hero = () => {
               </div>
 
               {/* Row 2 — drifts right */}
-              <div className="flex">
-                <div className="drift-right flex gap-2" style={{ width: 'max-content' }}>
-                  {[...DRIFT_BADGES, ...DRIFT_BADGES].map((label, i) => (
+              <div>
+                <div
+                  className="flex gap-2"
+                  style={{
+                    width: 'max-content',
+                    animation: 'drift-right 35s linear infinite',
+                    willChange: 'transform',
+                  }}
+                >
+                  {DRIFT_ROW_RIGHT.map((label, i) => (
                     <span
                       key={i}
                       className="font-mono text-[10px] text-zinc-500 bg-surface border border-border-subtle rounded-full px-3 py-1 whitespace-nowrap"

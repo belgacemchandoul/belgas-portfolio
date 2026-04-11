@@ -18,7 +18,7 @@ const App = () => {
   }, [])
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <AnimatePresence>
         {loading && <LoadingSpinner />}
       </AnimatePresence>
@@ -31,7 +31,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

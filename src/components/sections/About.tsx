@@ -5,7 +5,7 @@ import TechBadge from "../ui/TechBadge";
 const About = () => {
   return (
     <section id="about" className="bg-hero-bg py-28 px-6">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-[55fr_45fr] gap-20 items-start">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-12 lg:gap-20 items-start">
         {/* Left — bio */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

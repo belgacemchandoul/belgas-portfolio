@@ -50,7 +50,7 @@ const MagneticButton = ({
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="inline-block"
+      className="inline-flex"
     >
       {href ? (
         <a

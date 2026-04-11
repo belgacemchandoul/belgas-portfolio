@@ -89,7 +89,7 @@ const ProjectDetailsPage = ({
         <motion.h1
           {...fadeUp(0.1)}
           className="font-display text-white mt-4"
-          style={{ fontSize: 'clamp(48px, 6vw, 80px)', lineHeight: 1.0 }}
+          style={{ fontSize: 'clamp(36px, 7vw, 80px)', lineHeight: 1.0 }}
         >
           {title}
         </motion.h1>
@@ -97,7 +97,7 @@ const ProjectDetailsPage = ({
         <motion.p
           {...fadeUp(0.15)}
           className="font-sans mt-4 max-w-2xl"
-          style={{ fontSize: '20px', lineHeight: 1.6, color: '#777' }}
+          style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: 1.6, color: '#777' }}
         >
           {description}
         </motion.p>
@@ -123,7 +123,7 @@ const ProjectDetailsPage = ({
         )}
 
         {(githubLink || liveLink) && (
-          <motion.div {...fadeUp(0.25)} className="flex flex-wrap gap-3 mt-6">
+          <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row flex-wrap gap-3 mt-6">
             {githubLink && (
               <MagneticButton
                 href={githubLink}
@@ -198,7 +198,7 @@ const ProjectDetailsPage = ({
         {features && features.length > 0 && (
           <div>
             <p className="font-mono text-[11px] text-muted uppercase tracking-widest mb-6">features</p>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((f, i) => (
                 <motion.div
                   key={f.name}

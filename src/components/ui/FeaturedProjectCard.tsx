@@ -72,7 +72,7 @@ const FeaturedProjectCard = ({
       className="bg-surface rounded-2xl border border-border-subtle overflow-hidden"
       style={{ borderTop: '1px solid rgba(200,242,100,0.18)' }}
     >
-      <div className="grid md:grid-cols-[60fr_40fr]">
+      <div className="grid grid-cols-1 lg:grid-cols-[60fr_40fr]">
         {/* Left — content */}
         <div className="p-8 flex flex-col gap-4">
           <div className="flex items-center gap-3 flex-wrap">
@@ -127,7 +127,7 @@ const FeaturedProjectCard = ({
         </div>
 
         {/* Right — architecture diagram */}
-        <div className="border-t md:border-t-0 md:border-l border-border-subtle bg-hero-bg flex items-center justify-center">
+        <div className="border-t lg:border-t-0 lg:border-l border-border-subtle bg-hero-bg flex items-center justify-center">
           <ArchDiagram />
         </div>
       </div>

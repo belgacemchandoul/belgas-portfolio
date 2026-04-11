@@ -16,7 +16,7 @@ const GithubIcon = () => (
 const Footer = () => {
   return (
     <footer className="py-8 border-t border-border-subtle bg-hero-bg px-6">
-      <div className="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-4">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left */}
         <span className="font-mono text-[11px] text-muted">belgacem.dev</span>
 
@@ -26,14 +26,14 @@ const Footer = () => {
         </span>
 
         {/* Right — icons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1">
           <a
             href={social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
             data-cursor="link"
-            className="text-zinc-600 hover:text-lime transition-colors duration-300"
+            className="flex items-center justify-center min-h-[44px] min-w-[44px] text-zinc-600 hover:text-lime transition-colors duration-300"
           >
             <LinkedinIcon />
           </a>
@@ -43,7 +43,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="GitHub profile"
             data-cursor="link"
-            className="text-zinc-600 hover:text-lime transition-colors duration-300"
+            className="flex items-center justify-center min-h-[44px] min-w-[44px] text-zinc-600 hover:text-lime transition-colors duration-300"
           >
             <GithubIcon />
           </a>
@@ -51,7 +51,7 @@ const Footer = () => {
             href={`mailto:${social.email}`}
             aria-label="Send email"
             data-cursor="link"
-            className="text-zinc-600 hover:text-lime transition-colors duration-300"
+            className="flex items-center justify-center min-h-[44px] min-w-[44px] text-zinc-600 hover:text-lime transition-colors duration-300"
           >
             <Mail size={16} />
           </a>

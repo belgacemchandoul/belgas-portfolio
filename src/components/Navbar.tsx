@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white flex items-center justify-center min-h-[44px] min-w-[44px]"
             onClick={() => setMobileOpen(true)}
             data-cursor="link"
             aria-label="Open navigation menu"
@@ -99,10 +99,10 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 bg-hero-bg z-50 flex flex-col items-center justify-center gap-10"
+            className="fixed inset-0 h-screen h-dvh bg-hero-bg z-50 flex flex-col items-center justify-center gap-10"
           >
             <button
-              className="absolute top-5 right-6 text-white"
+              className="absolute top-5 right-6 text-white flex items-center justify-center min-h-[44px] min-w-[44px]"
               onClick={() => setMobileOpen(false)}
               data-cursor="link"
               aria-label="Close navigation menu"

@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
-import { social } from '../../data/social'
-import MagneticButton from '../ui/MagneticButton'
+import { motion } from "framer-motion";
+import { social } from "../../data/social";
+import MagneticButton from "../ui/MagneticButton";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 } as const,
-  viewport: { once: true, margin: '-50px' } as const,
+  viewport: { once: true, margin: "-50px" } as const,
   transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const, delay },
-})
+});
 
 const Contact = () => {
   return (
@@ -23,7 +23,7 @@ const Contact = () => {
         <motion.h2
           {...fadeUp(0.1)}
           className="font-display text-white mt-4"
-          style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.05 }}
+          style={{ fontSize: "clamp(36px, 6vw, 72px)", lineHeight: 1.05 }}
         >
           Let's build
           <br />
@@ -33,9 +33,10 @@ const Contact = () => {
         <motion.p
           {...fadeUp(0.2)}
           className="font-sans text-[#666] mt-5 max-w-md mx-auto"
-          style={{ fontSize: '17px', lineHeight: 1.7 }}
+          style={{ fontSize: "17px", lineHeight: 1.7 }}
         >
-          Open to full-time engineering roles and selective freelance projects.
+          Open to full-time engineering roles, available for remote work
+          worldwide and selective freelance projects.
         </motion.p>
 
         <motion.div
@@ -75,7 +76,7 @@ const Contact = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -7,28 +7,82 @@
     "status": "live",
     "featured": true,
     "market": ["GCC · Qatar", "AI / LLM"],
-    "metrics": ["Multi-tenant", "Production-ready", "Live with paying clients"],
+    "metrics": ["Multi-tenant", "Production-ready", "Live — pilot deployment"],
     "imageSrc": "/flowiq.png",
     "description": "WhatsApp AI agent that automates the full patient journey for clinics — bookings, reminders, cancellations — running 24/7 with zero staff intervention.",
     "summary": "FlowIQ is a multi-tenant AI SaaS platform that automates clinic operations via WhatsApp. Built with LangGraph and Claude API, it manages the full patient lifecycle autonomously. Engineered for production with Redis distributed locks, Celery for async reminder dispatch, Fernet-encrypted credential storage, and checkpoint-based conversation persistence.",
     "techStack": [
-      { "name": "Python", "link": "https://www.python.org/", "description": "Core backend language." },
-      { "name": "FastAPI", "link": "https://fastapi.tiangolo.com/", "description": "High-performance async API framework." },
-      { "name": "LangGraph", "link": "https://langchain-ai.github.io/langgraph/", "description": "Stateful multi-step AI agent orchestration." },
-      { "name": "Claude API", "link": "https://www.anthropic.com/", "description": "LLM powering the conversational agent." },
-      { "name": "PostgreSQL", "link": "https://www.postgresql.org/", "description": "Primary relational database with per-tenant isolation." },
-      { "name": "Redis", "link": "https://redis.io/", "description": "Distributed locks for concurrent session safety." },
-      { "name": "Celery", "link": "https://docs.celeryq.dev/", "description": "Async task queue for appointment reminder dispatch." },
-      { "name": "Next.js", "link": "https://nextjs.org/", "description": "Super-admin dashboard for clinic management." },
-      { "name": "Railway", "link": "https://railway.app/", "description": "Cloud deployment and infrastructure." }
+      {
+        "name": "Python",
+        "link": "https://www.python.org/",
+        "description": "Core backend language."
+      },
+      {
+        "name": "FastAPI",
+        "link": "https://fastapi.tiangolo.com/",
+        "description": "High-performance async API framework."
+      },
+      {
+        "name": "LangGraph",
+        "link": "https://langchain-ai.github.io/langgraph/",
+        "description": "Stateful multi-step AI agent orchestration."
+      },
+      {
+        "name": "Claude API",
+        "link": "https://www.anthropic.com/",
+        "description": "LLM powering the conversational agent."
+      },
+      {
+        "name": "PostgreSQL",
+        "link": "https://www.postgresql.org/",
+        "description": "Primary relational database with per-tenant isolation."
+      },
+      {
+        "name": "Redis",
+        "link": "https://redis.io/",
+        "description": "Distributed locks for concurrent session safety."
+      },
+      {
+        "name": "Celery",
+        "link": "https://docs.celeryq.dev/",
+        "description": "Async task queue for appointment reminder dispatch."
+      },
+      {
+        "name": "Next.js",
+        "link": "https://nextjs.org/",
+        "description": "Super-admin dashboard for clinic management."
+      },
+      {
+        "name": "Railway",
+        "link": "https://railway.app/",
+        "description": "Cloud deployment and infrastructure."
+      }
     ],
     "features": [
-      { "name": "Autonomous booking management", "description": "Patients book, reschedule, and cancel entirely through WhatsApp — no staff intervention." },
-      { "name": "Multi-tenant architecture", "description": "Each clinic is fully isolated at the database layer with per-tenant encrypted WhatsApp credentials." },
-      { "name": "Concurrent session safety", "description": "Redis distributed locks prevent race conditions when multiple patients message simultaneously." },
-      { "name": "Durable reminders", "description": "Celery task queues dispatch appointment reminders with atomic deduplication to prevent duplicates." },
-      { "name": "LLM conversation persistence", "description": "LangGraph checkpoints stored in PostgreSQL maintain full conversation context across sessions." },
-      { "name": "Super-admin dashboard", "description": "Next.js dashboard for managing clinics, viewing bookings, and monitoring agent activity." }
+      {
+        "name": "Autonomous booking management",
+        "description": "Patients book, reschedule, and cancel entirely through WhatsApp — no staff intervention."
+      },
+      {
+        "name": "Multi-tenant architecture",
+        "description": "Each clinic is fully isolated at the database layer with per-tenant encrypted WhatsApp credentials."
+      },
+      {
+        "name": "Concurrent session safety",
+        "description": "Redis distributed locks prevent race conditions when multiple patients message simultaneously."
+      },
+      {
+        "name": "Durable reminders",
+        "description": "Celery task queues dispatch appointment reminders with atomic deduplication to prevent duplicates."
+      },
+      {
+        "name": "LLM conversation persistence",
+        "description": "LangGraph checkpoints stored in PostgreSQL maintain full conversation context across sessions."
+      },
+      {
+        "name": "Super-admin dashboard",
+        "description": "Next.js dashboard for managing clinics, viewing bookings, and monitoring agent activity."
+      }
     ],
     "githubLink": null,
     "liveLink": null,
@@ -46,26 +100,92 @@
     "description": "YouSafe is a wheelchair accessibility platform for Ireland, helping users find accessible restaurants, hotels, transport, hospitals, parks and more across Dublin. Every location is verified, rated and packed with real accessibility details.",
     "summary": "YouSafe is a wheelchair accessibility platform focused on Dublin, Ireland, designed to help users easily find and explore accessible locations such as restaurants, hotels, transport hubs, hospitals, and parks. Every location is carefully verified, rated, and enriched with real accessibility details to ensure reliability and trust. The platform features an interactive map powered by Leaflet, allowing users to visually navigate the city and discover accessible places nearby. It also includes an admin dashboard where accessibility data can be managed efficiently, along with blog support for sharing updates and insights. Built with modern technologies, YouSafe ensures performance, scalability, and a smooth user experience across devices.",
     "techStack": [
-      { "name": "Next.js", "link": "https://nextjs.org/", "description": "For server-side rendering, App Router, and API routes." },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/", "description": "For adding static typing to the project, enhancing code quality and maintainability." },
-      { "name": "Prisma", "link": "https://www.prisma.io/", "description": "For database management and data modeling with PostgreSQL." },
-      { "name": "Supabase", "link": "https://supabase.com/", "description": "For hosting the PostgreSQL database with connection pooling." },
-      { "name": "Tailwind CSS", "link": "https://tailwindcss.com/", "description": "For modern styling and mobile-first responsive design." },
-      { "name": "Shadcn/ui", "link": "https://ui.shadcn.com/", "description": "For accessible and reusable UI components." },
-      { "name": "Leaflet", "link": "https://leafletjs.com/", "description": "For the interactive map displaying accessible locations across Dublin." },
-      { "name": "NextAuth.js", "link": "https://next-auth.js.org/", "description": "For secure admin authentication and session management." },
-      { "name": "Framer Motion", "link": "https://www.framer.com/motion/", "description": "For scroll-triggered animations and smooth page transitions." },
-      { "name": "React Hook Form", "link": "https://react-hook-form.com/", "description": "For efficient and flexible form management in the admin dashboard." },
-      { "name": "Tiptap", "link": "https://tiptap.dev/", "description": "For the rich text editor used in the blog post management." },
-      { "name": "Zod", "link": "https://zod.dev/", "description": "For schema validation on both forms and API routes." }
+      {
+        "name": "Next.js",
+        "link": "https://nextjs.org/",
+        "description": "For server-side rendering, App Router, and API routes."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Prisma",
+        "link": "https://www.prisma.io/",
+        "description": "For database management and data modeling with PostgreSQL."
+      },
+      {
+        "name": "Supabase",
+        "link": "https://supabase.com/",
+        "description": "For hosting the PostgreSQL database with connection pooling."
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and mobile-first responsive design."
+      },
+      {
+        "name": "Shadcn/ui",
+        "link": "https://ui.shadcn.com/",
+        "description": "For accessible and reusable UI components."
+      },
+      {
+        "name": "Leaflet",
+        "link": "https://leafletjs.com/",
+        "description": "For the interactive map displaying accessible locations across Dublin."
+      },
+      {
+        "name": "NextAuth.js",
+        "link": "https://next-auth.js.org/",
+        "description": "For secure admin authentication and session management."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "For scroll-triggered animations and smooth page transitions."
+      },
+      {
+        "name": "React Hook Form",
+        "link": "https://react-hook-form.com/",
+        "description": "For efficient and flexible form management in the admin dashboard."
+      },
+      {
+        "name": "Tiptap",
+        "link": "https://tiptap.dev/",
+        "description": "For the rich text editor used in the blog post management."
+      },
+      {
+        "name": "Zod",
+        "link": "https://zod.dev/",
+        "description": "For schema validation on both forms and API routes."
+      }
     ],
     "features": [
-      { "name": "Accessibility Discovery", "description": "Find wheelchair-friendly restaurants, hotels, transport, hospitals, parks, and more across Dublin." },
-      { "name": "Verified Locations", "description": "Every place is reviewed and enriched with real accessibility details for accuracy and trust." },
-      { "name": "Interactive Map", "description": "Explore accessible locations visually using an interactive map powered by Leaflet." },
-      { "name": "Admin Dashboard", "description": "Manage locations, content, and accessibility data efficiently through a secure admin panel." },
-      { "name": "Authentication", "description": "Secure admin access and session handling powered by NextAuth." },
-      { "name": "Responsive Design", "description": "Optimized experience across all devices with a clean and modern UI." }
+      {
+        "name": "Accessibility Discovery",
+        "description": "Find wheelchair-friendly restaurants, hotels, transport, hospitals, parks, and more across Dublin."
+      },
+      {
+        "name": "Verified Locations",
+        "description": "Every place is reviewed and enriched with real accessibility details for accuracy and trust."
+      },
+      {
+        "name": "Interactive Map",
+        "description": "Explore accessible locations visually using an interactive map powered by Leaflet."
+      },
+      {
+        "name": "Admin Dashboard",
+        "description": "Manage locations, content, and accessibility data efficiently through a secure admin panel."
+      },
+      {
+        "name": "Authentication",
+        "description": "Secure admin access and session handling powered by NextAuth."
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Optimized experience across all devices with a clean and modern UI."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/YouSafe",
     "liveLink": "https://you-safe.vercel.app/",
@@ -83,21 +203,68 @@
     "description": "EmotiScan is a web app that analyzes emotions and sentiments in text, using machine learning to detect tone and sentiment.",
     "summary": "EmotiScan is a web-based application designed to analyze the emotions and sentiments of any text by leveraging powerful machine learning models. Users can enter any text, and the app processes the input using pre-trained models to detect the emotional tone and sentiment breakdown—whether positive, negative, or neutral. Visual charts then display the results, making it easy to interpret the emotions present in the text and gain insights into the overall sentiment.",
     "techStack": [
-      { "name": "React.js", "link": "https://react.dev/", "description": "For building the interactive UI." },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/", "description": "For adding static typing to the project, enhancing code quality and maintainability." },
-      { "name": "Vite", "link": "https://vitejs.dev/", "description": "For a fast and optimized development environment with a modern build tool." },
-      { "name": "Tailwind CSS", "link": "https://tailwindcss.com/", "description": "For modern styling and responsive design." },
-      { "name": "Framer Motion", "link": "https://www.framer.com/motion/", "description": "For beautiful animations and transitions." },
-      { "name": "Axios", "link": "https://axios-http.com/", "description": "For making API requests to Hugging Face models." },
-      { "name": "Chart.js", "link": "https://www.chartjs.org/", "description": "For rendering pie and bar charts that represent the emotional and sentiment data." },
-      { "name": "Hugging Face", "link": "https://huggingface.co/", "description": "For leveraging state-of-the-art pre-trained machine learning models to analyze emotions and sentiments from text." }
+      {
+        "name": "React.js",
+        "link": "https://react.dev/",
+        "description": "For building the interactive UI."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Vite",
+        "link": "https://vitejs.dev/",
+        "description": "For a fast and optimized development environment with a modern build tool."
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "For beautiful animations and transitions."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests to Hugging Face models."
+      },
+      {
+        "name": "Chart.js",
+        "link": "https://www.chartjs.org/",
+        "description": "For rendering pie and bar charts that represent the emotional and sentiment data."
+      },
+      {
+        "name": "Hugging Face",
+        "link": "https://huggingface.co/",
+        "description": "For leveraging state-of-the-art pre-trained machine learning models to analyze emotions and sentiments from text."
+      }
     ],
     "features": [
-      { "name": "Emotion Detection", "description": "Detects various emotions (joy, sadness, anger, etc.) from the input text using advanced AI models." },
-      { "name": "Sentiment Analysis", "description": "Provides a sentiment score breakdown (positive, negative, neutral) to understand the overall tone of the text." },
-      { "name": "Visualized Results", "description": "Data is presented with easy-to-understand visualizations, including pie charts and bar charts." },
-      { "name": "Interactive UI", "description": "Clean, modern UI built with React, Framer Motion, and Tailwind CSS for a smooth user experience." },
-      { "name": "API Integration", "description": "Uses Hugging Face APIs to power emotion and sentiment analysis." }
+      {
+        "name": "Emotion Detection",
+        "description": "Detects various emotions (joy, sadness, anger, etc.) from the input text using advanced AI models."
+      },
+      {
+        "name": "Sentiment Analysis",
+        "description": "Provides a sentiment score breakdown (positive, negative, neutral) to understand the overall tone of the text."
+      },
+      {
+        "name": "Visualized Results",
+        "description": "Data is presented with easy-to-understand visualizations, including pie charts and bar charts."
+      },
+      {
+        "name": "Interactive UI",
+        "description": "Clean, modern UI built with React, Framer Motion, and Tailwind CSS for a smooth user experience."
+      },
+      {
+        "name": "API Integration",
+        "description": "Uses Hugging Face APIs to power emotion and sentiment analysis."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/EmotiScan",
     "liveLink": "https://emotiscan.netlify.app/",
@@ -115,21 +282,68 @@
     "description": "HireHaven is a job board platform where users can log in, explore jobs, apply, and update their portfolios.",
     "summary": "HireHaven is a job board platform that enables users to log in, explore job listings, and apply for jobs while also managing and updating their portfolios, offering a seamless experience for job hunting and career management. Built with modern web development technologies for optimal performance, the app allows users to securely log in via NextAuth, navigate various job listings, search by title or industry, and apply by submitting a resume and cover letter. Additionally, users can manage their personal portfolios by adding new projects, experiences, and skills, enhancing their job applications.",
     "techStack": [
-      { "name": "Next.js", "link": "https://nextjs.org/", "description": "For server-side rendering and routing." },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/", "description": "For adding static typing to the project, enhancing code quality and maintainability." },
-      { "name": "Prisma", "link": "https://www.prisma.io/", "description": "For database management and data modeling." },
-      { "name": "Tailwind CSS", "link": "https://tailwindcss.com/", "description": "For modern styling and responsive design." },
-      { "name": "Framer Motion", "link": "https://www.framer.com/motion/", "description": "For beautiful animations and transitions." },
-      { "name": "Axios", "link": "https://axios-http.com/", "description": "For making API requests." },
-      { "name": "React Hook Form", "link": "https://react-hook-form.com/", "description": "For efficient and flexible form management." },
-      { "name": "NextAuth.js", "link": "https://next-auth.js.org/", "description": "For secure authentication and authorization." }
+      {
+        "name": "Next.js",
+        "link": "https://nextjs.org/",
+        "description": "For server-side rendering and routing."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Prisma",
+        "link": "https://www.prisma.io/",
+        "description": "For database management and data modeling."
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Framer Motion",
+        "link": "https://www.framer.com/motion/",
+        "description": "For beautiful animations and transitions."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests."
+      },
+      {
+        "name": "React Hook Form",
+        "link": "https://react-hook-form.com/",
+        "description": "For efficient and flexible form management."
+      },
+      {
+        "name": "NextAuth.js",
+        "link": "https://next-auth.js.org/",
+        "description": "For secure authentication and authorization."
+      }
     ],
     "features": [
-      { "name": "Job Listings", "description": "Browse and search for various job openings by title or industry." },
-      { "name": "Job Applications", "description": "Apply for jobs directly from the platform with a simple and intuitive process." },
-      { "name": "Portfolio Management", "description": "Create, update, and manage your portfolio to showcase skills and work experience." },
-      { "name": "Authentication", "description": "Secure user login and account management powered by NextAuth." },
-      { "name": "Responsive Design", "description": "Clean and modern design ensuring an optimal experience across all devices." }
+      {
+        "name": "Job Listings",
+        "description": "Browse and search for various job openings by title or industry."
+      },
+      {
+        "name": "Job Applications",
+        "description": "Apply for jobs directly from the platform with a simple and intuitive process."
+      },
+      {
+        "name": "Portfolio Management",
+        "description": "Create, update, and manage your portfolio to showcase skills and work experience."
+      },
+      {
+        "name": "Authentication",
+        "description": "Secure user login and account management powered by NextAuth."
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Clean and modern design ensuring an optimal experience across all devices."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/job-board-app",
     "liveLink": "https://job-board-app-alpha.vercel.app/",
@@ -147,19 +361,59 @@
     "description": "FootyQuizMaster is a fun web app with four quiz modes to challenge football fans' knowledge.",
     "summary": "FootyQuizMaster is a fun and interactive web app that challenges users' football knowledge through four unique quiz modes, making it perfect for football enthusiasts. From guessing players based on career paths to comparing goal tallies and predicting historical match results, the app offers a variety of ways to test and improve your football trivia skills.",
     "techStack": [
-      { "name": "React.js", "link": "https://react.dev/", "description": "For building the interactive UI." },
-      { "name": "TypeScript", "link": "https://www.typescriptlang.org/", "description": "For adding static typing to the project, enhancing code quality and maintainability." },
-      { "name": "Vite", "link": "https://vitejs.dev/", "description": "For a fast and optimized development environment." },
-      { "name": "Tailwind CSS", "link": "https://tailwindcss.com/", "description": "For modern styling and responsive design." },
-      { "name": "Firebase", "link": "https://firebase.google.com/", "description": "For real-time data and backend services." },
-      { "name": "Axios", "link": "https://axios-http.com/", "description": "For making API requests." },
-      { "name": "React Router", "link": "https://reactrouter.com/en/main", "description": "For navigation between different quiz games and pages." }
+      {
+        "name": "React.js",
+        "link": "https://react.dev/",
+        "description": "For building the interactive UI."
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "description": "For adding static typing to the project, enhancing code quality and maintainability."
+      },
+      {
+        "name": "Vite",
+        "link": "https://vitejs.dev/",
+        "description": "For a fast and optimized development environment."
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "description": "For modern styling and responsive design."
+      },
+      {
+        "name": "Firebase",
+        "link": "https://firebase.google.com/",
+        "description": "For real-time data and backend services."
+      },
+      {
+        "name": "Axios",
+        "link": "https://axios-http.com/",
+        "description": "For making API requests."
+      },
+      {
+        "name": "React Router",
+        "link": "https://reactrouter.com/en/main",
+        "description": "For navigation between different quiz games and pages."
+      }
     ],
     "features": [
-      { "name": "Who Am I?", "description": "Guess the player based on their career path, progressing through various clubs and leagues." },
-      { "name": "Who Has More Goals?", "description": "Compare two players and guess who scored more career goals. The game continues until you lose." },
-      { "name": "Who's Missing?", "description": "Given a football squad with a missing player, guess who's absent from the historic lineup." },
-      { "name": "Guess the Result", "description": "Test your knowledge of football history by guessing the final result of completed historical matches." }
+      {
+        "name": "Who Am I?",
+        "description": "Guess the player based on their career path, progressing through various clubs and leagues."
+      },
+      {
+        "name": "Who Has More Goals?",
+        "description": "Compare two players and guess who scored more career goals. The game continues until you lose."
+      },
+      {
+        "name": "Who's Missing?",
+        "description": "Given a football squad with a missing player, guess who's absent from the historic lineup."
+      },
+      {
+        "name": "Guess the Result",
+        "description": "Test your knowledge of football history by guessing the final result of completed historical matches."
+      }
     ],
     "githubLink": "https://github.com/belgacemchandoul/footballQuizApp",
     "liveLink": "https://footyquizmaster.netlify.app/",

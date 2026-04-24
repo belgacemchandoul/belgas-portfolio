@@ -9,15 +9,15 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     period: "Oct 2023 – Present",
-    role: "Full-Stack Engineer & Founder",
-    company: "Freelance / Independent",
+    role: "Senior AI Engineer (Contract)",
+    company: "Independent · Remote",
     location: "Doha, Qatar",
     bullets: [
-      "Built and deployed FlowIQ, a multi-tenant AI SaaS platform designed to automate clinic workflows through a WhatsApp-based AI agent",
-      "Designed backend systems using Python, FastAPI, PostgreSQL, and Redis, handling concurrent sessions and ensuring reliability",
-      "Implemented asynchronous workflows for scheduling and notifications, with a focus on production stability",
-      "Built YouSafe, a full-stack accessibility platform for a Dublin-based use case, achieving strong performance and accessibility scores",
-      "Developed multiple full-stack applications including dashboards, job boards, and content platforms, covering the full development lifecycle from frontend to backend to deployment"
+      "Shipped FlowIQ, a production multi-tenant AI agent platform on LangGraph and Claude, with per-tenant encrypted credentials, persistent conversation state, and multi-language support (Arabic/English auto-detection)",
+      "Built the full stack from scratch: FastAPI backend, Supabase/PostgreSQL, Redis + Celery for async task processing, and Next.js admin dashboard deployed on Vercel",
+      "Shipped YouSafe, a Dublin accessibility directory on Next.js 16, Prisma, and NextAuth v5 — delivered with 88/90/100/100 Lighthouse scores, full GDPR compliance, and production SEO",
+      "Solved real production problems: LangGraph checkpoint recovery, Celery solo-pool deployment on Railway, asyncpg port configuration for Supabase, and multi-tenant token encryption",
+      "Deliver contract engagements for agencies and startups, from fixed-scope builds to ongoing retainers"
     ]
   },
   {
@@ -26,8 +26,8 @@ export const experience: ExperienceItem[] = [
     company: "GnG Esports",
     location: "Tunisia",
     bullets: [
-      "Built production React.js marketing platform from scratch, collaborating with designers and stakeholders",
-      "+40% session duration through UI optimisation, animation performance tuning, and mobile-first implementation"
+      "Built production React.js marketing platform from scratch, collaborating with designers and product stakeholders",
+      "Drove +40% session duration through UI optimization, animation performance tuning, and mobile-first implementation"
     ]
   },
   {

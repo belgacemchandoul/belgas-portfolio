@@ -35,8 +35,8 @@ const Contact = () => {
           className="font-sans text-[#666] mt-5 max-w-md mx-auto"
           style={{ fontSize: "17px", lineHeight: 1.7 }}
         >
-          Open to full-time engineering roles, available for remote work
-          worldwide and selective freelance projects.
+          Available for contract work with agencies and startups. Remote,
+          async-friendly across US, UK, and EU timezones.
         </motion.p>
 
         <motion.div

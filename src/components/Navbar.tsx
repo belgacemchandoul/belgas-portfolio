@@ -1,54 +1,54 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
-import { scroller } from 'react-scroll'
-import { Menu, X } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: 'Work', target: 'projects' },
-  { label: 'About', target: 'about' },
-  { label: 'Contact', target: 'contact' },
-]
+  { label: "Work", target: "projects" },
+  { label: "About", target: "about" },
+  { label: "Contact", target: "contact" },
+];
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const navigate = useNavigate()
-  const { pathname } = useLocation()
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleBrandClick = () => {
-    if (pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      navigate('/')
+      navigate("/");
     }
-  }
+  };
 
   const scrollTo = (target: string) => {
-    setMobileOpen(false)
-    if (pathname !== '/') {
-      navigate('/')
+    setMobileOpen(false);
+    if (pathname !== "/") {
+      navigate("/");
       setTimeout(() => {
-        scroller.scrollTo(target, { smooth: true, duration: 500 })
-      }, 100)
+        scroller.scrollTo(target, { smooth: true, duration: 500 });
+      }, 100);
     } else {
-      scroller.scrollTo(target, { smooth: true, duration: 500 })
+      scroller.scrollTo(target, { smooth: true, duration: 500 });
     }
-  }
+  };
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-hero-bg/80 backdrop-blur-md border-b border-zinc-800/50'
-            : 'bg-transparent border-b-0 border-transparent shadow-none'
+            ? "bg-hero-bg/80 backdrop-blur-md border-b border-zinc-800/50"
+            : "bg-transparent border-b-0 border-transparent shadow-none"
         }`}
       >
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -74,8 +74,11 @@ const Navbar = () => {
               </button>
             ))}
             <span className="flex items-center gap-2 font-mono text-xs text-lime border border-lime/30 rounded-full px-3 py-1.5 select-none">
-              <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" aria-hidden="true" />
-              available for hire
+              <span
+                className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"
+                aria-hidden="true"
+              />
+              taking contracts
             </span>
           </nav>
 
@@ -114,7 +117,11 @@ const Navbar = () => {
                 key={target}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08, duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                transition={{
+                  delay: i * 0.08,
+                  duration: 0.35,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
                 onClick={() => scrollTo(target)}
                 data-cursor="link"
                 className="font-display text-4xl text-white hover:text-lime transition-colors duration-300"
@@ -126,7 +133,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

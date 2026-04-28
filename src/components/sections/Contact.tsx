@@ -35,8 +35,8 @@ const Contact = () => {
           className="font-sans text-[#666] mt-5 max-w-md mx-auto"
           style={{ fontSize: "17px", lineHeight: 1.7 }}
         >
-          Available for contract work with agencies and startups. Remote,
-          async-friendly across US, UK, and EU timezones.
+          Open to remote full-time roles and contract work. Comfortable with
+          async collaboration across US, UK, and EU timezones.
         </motion.p>
 
         <motion.div

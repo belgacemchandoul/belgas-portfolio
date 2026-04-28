@@ -78,7 +78,7 @@ const Navbar = () => {
                 className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"
                 aria-hidden="true"
               />
-              taking contracts
+              Open to roles
             </span>
           </nav>
 

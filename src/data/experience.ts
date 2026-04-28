@@ -9,15 +9,15 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     period: "Oct 2023 – Present",
-    role: "Senior AI Engineer (Contract)",
+    role: "Full-Stack Engineer",
     company: "Independent · Remote",
     location: "Doha, Qatar",
     bullets: [
-      "Shipped FlowIQ, a production multi-tenant AI agent platform on LangGraph and Claude, with per-tenant encrypted credentials, persistent conversation state, and multi-language support (Arabic/English auto-detection)",
-      "Built the full stack from scratch: FastAPI backend, Supabase/PostgreSQL, Redis + Celery for async task processing, and Next.js admin dashboard deployed on Vercel",
-      "Shipped YouSafe, a Dublin accessibility directory on Next.js 16, Prisma, and NextAuth v5 — delivered with 88/90/100/100 Lighthouse scores, full GDPR compliance, and production SEO",
-      "Solved real production problems: LangGraph checkpoint recovery, Celery solo-pool deployment on Railway, asyncpg port configuration for Supabase, and multi-tenant token encryption",
-      "Deliver contract engagements for agencies and startups, from fixed-scope builds to ongoing retainers"
+      "Built and shipped FlowIQ, a multi-tenant AI agent platform for automating business workflows. Owned the full stack: FastAPI backend, Supabase/PostgreSQL, Redis + Celery for async processing, LangGraph for agent state, Claude API integration, and a Next.js admin dashboard",
+      "Shipped YouSafe, a production Next.js 16 app with Prisma, NextAuth v5, Leaflet maps, and a full Tiptap CMS. Lighthouse scores of 88/90/100/100, GDPR compliance, and SEO-ready",
+      "Solved real production problems across the stack: deployment quirks on Railway, async DB configuration with Supabase, multi-tenant architecture, and the practical realities of running AI integrations in production",
+      "Took on contract engagements for startups and product teams, both fixed-scope project work and ongoing development",
+      "Built additional full-stack applications across the stack: dashboards, content platforms, and internal tools. Comfortable with the full lifecycle from data modeling to deployment"
     ]
   },
   {

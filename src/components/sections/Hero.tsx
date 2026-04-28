@@ -12,8 +12,8 @@ const fadeUp = (delay: number) => ({
 });
 
 const stats = [
-  { label: "PRODUCTION STACK ", value: "Multi-tenant agents" },
-  { label: "AVAILABILITY", value: "Async, global" },
+  { label: "CORE STACK", value: "Next.js / React.js + Python" },
+  { label: "AVAILABILITY", value: "Remote, global" },
   { label: "Based in", value: "Doha, Qatar" },
 ];
 
@@ -89,7 +89,7 @@ const Hero = () => {
               {...fadeUp(0.1)}
               className="font-mono text-[11px] text-muted tracking-[0.08em] sm:tracking-[0.15em] uppercase"
             >
-              Senior AI Engineer · <br className="sm:hidden" />
+              FULL-STACK ENGINEER · <br className="sm:hidden" />
               Doha, Qatar
             </motion.p>
 
@@ -114,8 +114,8 @@ const Hero = () => {
               className="font-sans text-[#666] mt-6 w-full max-w-full sm:max-w-lg"
               style={{ fontSize: "18px", lineHeight: 1.8 }}
             >
-              I build multi-tenant AI products that ship, bill real customers,
-              and don't fall over in production.
+              I build production web apps end-to-end, with real AI integration
+              when projects call for it.
             </motion.p>
 
             {/* CTAs — stack vertically on mobile, row on sm+ */}

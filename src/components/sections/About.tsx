@@ -23,28 +23,33 @@ const About = () => {
           >
             Engineer.
             <br />
-            Shipper.
+            Builder.
             <br />
-            Specialist.
+            Shipper.
           </h2>
 
           <div
             className="font-sans text-[#777] mt-8 space-y-5"
             style={{ fontSize: "17px", lineHeight: 1.9 }}
           >
-            <p>I'm Belgacem, an AI engineer based in Doha, Qatar.</p>
+            <p>I'm Belgacem, a full-stack engineer based in Doha, Qatar.</p>
+
             <p>
-              I build production AI systems end-to-end: from data models and API
-              design to deployment and live operation.{" "}
-              <span className="text-lime font-medium">FlowIQ</span> — my
-              production multi-tenant AI agent platform — is the clearest
-              example: LangGraph for state, FastAPI backend, Next.js dashboard,
-              live and billing paying customers.
+              I build production web apps end to end, from APIs and data models
+              to frontend and deployment. I mainly work with React, Next.js,
+              Python, and Node.js.
             </p>
+
             <p>
-              I take on contract engagements with agencies and startups —
-              fixed-scope builds or ongoing retainers — where I own the
-              technical side end to end.
+              I also integrate AI into real products.{" "}
+              <span className="text-lime font-medium">FlowIQ</span> is a
+              multi-tenant AI agent platform I built, live with paying
+              customers.
+            </p>
+
+            <p>
+              I work with startups and product teams on contract and own the
+              technical side from start to finish.
             </p>
           </div>
         </motion.div>
